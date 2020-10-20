@@ -1,0 +1,40 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+ <!-- 3.2.4 -->
+ <!--style>
+    .searchInput:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:before {
+        content: '☘️';
+    }
+</style-->
+ <div class="oj-hybrid-padding">
+        <h2>Trip Survey</h2>
+        <!-- 1.4.10 style="overflow: auto;" -->
+        <div>Survey Restults<br/>
+          <table border="1" class="oj-table-element oj-component-initnode oj-focus oj-focus-highlight" aria-labelledby="res">
+            <caption style="font-size: 1.25em;">Survey Restults</caption>
+        <tr class="oj-table-column-header-cell oj-focus">
+          <th scope="col" style="font-weight:bold" class="oj-table-column-header-cell">User Email</th>
+          <th scope="col" style="font-weight:bold" class="oj-table-column-header-cell">Trip Name</th>
+          <th scope="col" style="font-weight:bold" class="oj-table-column-header-cell">Accommodations</th>
+          <th scope="col" style="font-weight:bold" class="oj-table-column-header-cell">Food</th>
+        </tr>
+        <tbody data-bind="foreach: dataprovider">
+            <!-- 4.1.1 -->
+          <tr class="oj-table-body-row oj-table-hgrid-lines oj-table-body-current-row oj-focus">
+            <th scope="row" class="oj-table-data-cell oj-form-control-inherit oj-focus"><span data-bind="text: UserId"></span></th>
+            <th scope="row" class="oj-table-data-cell oj-form-control-inherit oj-focus"><span data-bind="text: TripName"></span></th>
+            <td class="oj-table-data-cell oj-form-control-inherit oj-focus"><span data-bind="text: AccomidationId"></span></td>
+            <td class="oj-table-data-cell oj-form-control-inherit oj-focus"><span data-bind="text: FoodId"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      

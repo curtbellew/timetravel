@@ -1,0 +1,98 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+	<h2>Confirm Reservation Details</h2>
+	<div class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12 oj-flex oj-xl-flex-items-2">
+		<div class="oj-flex-item oj-panel oj-sm-12 oj-md-12 oj-lg-4 oj-xl-4">
+		  <h2>Reserver Details</h2>
+			<div class="oj-flex oj-flex-items-pad">
+				<div class="oj-flex-item">
+					First Name: <span>
+						<oj-bind-text value="[[fnamevalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Last Name: <span>
+						<oj-bind-text value="[[lnamevalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Address 1: <span>
+						<oj-bind-text value="[[address1]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Address 2: <span>
+						<oj-bind-text value="[[address2]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Email: <span>
+						<oj-bind-text value="[[emailvalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					City: <span>
+						<oj-bind-text value="[[cityvalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					State: <span>
+						<oj-bind-text value="[[statevalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Zip: <span>
+						<oj-bind-text value="[[zipvalue]]">
+						</oj-bind-text>
+					</span>
+				<div class="oj-flex-item"></div>
+					Length of Stay: <span>
+						<oj-bind-text value="[[lengthofstay]]">
+						</oj-bind-text>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!--div class="oj-flex-item oj-panel oj-sm-12 oj-md-12 oj-lg-8 oj-xl-8">
+			<h2>Traveler Details</h2>
+			<div class="oj-flex oj-flex-items-pad">
+				<div class="oj-flex-item">
+					<oj-table id='table' aria-label='Travelors'
+						data='[[dataprovider]]'
+						columns='[{"headerText": "First Name",
+						   "field": "DepartmentId",
+						   "headerStyle": "min-width: 8em; max-width: 8em; width: 8em",
+						   "style": "min-width: 8em; max-width: 8em; width: 8em"},
+						  {"headerText": "Last Name",
+						   "field": "DepartmentName",
+						   "headerStyle": "min-width: 8em; max-width: 8em; width: 8em",
+						   "style": "min-width: 8em; max-width: 8em; width: 8em"},
+						  {"headerText": "Age",
+						   "field": "LocationId",
+						   "headerStyle": "min-width: 12em; max-width: 12em; width: 12em",
+						   "headerClassName": "oj-helper-text-align-end",
+						   "style": "min-width: 12em; max-width: 12em; width: 12em",
+						   "className": "oj-helper-text-align-end"},
+						  {"headerText": "Food Allergies",
+						   "field": "FoodAl",
+						   "headerStyle": "min-width: 7em; max-width: 7em; width: 7em",
+						   "style": "min-width: 7em; max-width: 7em; width: 7em"},
+						   {"headerText": "Zodiak Sign",
+						   "field": "Type",
+						   "headerStyle": "min-width: 7em; max-width: 7em; width: 7em",
+						   "style": "min-width: 7em; max-width: 7em; width: 7em"}]'
+						style='width: 75%; height: 200px;'>
+					</oj-table>
+				</div>
+			</div>
+		</div-->
+	</div>
+	<div>
+		<span><oj-button id='accept' on-oj-action='[[submit]]'>Confirm</oj-button></span>
+		<!-- 3.3.4 -->
+		<span><oj-button id='cancel' on-oj-action='[[back]]'>Back</oj-button></span>
+	</div>
+</div>

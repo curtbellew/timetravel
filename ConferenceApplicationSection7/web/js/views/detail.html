@@ -1,0 +1,51 @@
+
+<!-- 3.2.4 -->
+<!--style>
+    .searchInput:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:before {
+        content: '🚗';
+    }
+</style-->
+<div aria-live="polite" id="notifications" style="position:absolute;left:-1000px"></div>
+<!-- 1.3.3 -->
+<div>To check availability click the Trip Availability button at the bottom right.</div>
+<div id="detail">
+	<div class="detail">
+		<img class="travelImage" :src="[['css/images/travel/' + image()]]" :alt="[[tripName]]"></img>
+		<div class="caption">
+			<h4 class="pull-right">
+				<oj-bind-text value="[[price]]"></oj-bind-text>
+			</h4>
+			<h4>
+				<oj-bind-text value="[[tripName]]"></oj-bind-text>
+			</h4>
+			<!-- 1.4.4 -->
+			<p><!--/p>< style="white-space: nowrap;"-->
+				<oj-bind-text value="[[description]]"></oj-bind-text>
+			</p>
+		</div>
+	</div>
+	<div class="oj-flex-item oj-panel oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12">
+		<!--div>Press the Green button to book this trip!</div-->
+		<div class="oj-flex-bar">
+			<div class="oj-flex-bar-start">
+				<!-- 1.4.1 -->
+				<a class="redButton" href="#" data-bind="click: allTrips">Cancel</a>
+				<a class="greenButton" href="#" data-bind="click: bookTrip">Book Trip</a>
+			</div>
+			<div align="right" class="oj-flex-item oj-md-align-items-flex-end oj-sm-align-items-flex-end oj-md-align-items-flex-end
+				oj-lg-align-items-flex-end oj-xl-align-items-flex-end oj-sm-flex-direction-column">
+				<!-- 2.4.5 >
+				<oj-button id='testimonialsbutton' on-oj-action='[[testimonials]]'>Reviews</oj-button-->
+				<!-- 1.3.3 -->
+				<oj-button id='tripbutton' on-oj-action='[[testimonials]]'>Trip Availability</oj-button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
