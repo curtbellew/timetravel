@@ -11,7 +11,7 @@
         outline: #053a92 solid 1px;
     }
     .searchButton:before {
-        content: '🛰️';
+        content: '\1F526';
     }
 </style>
  <!-- 2.2.1 -->
@@ -49,8 +49,8 @@
 	    <!-- 1.3.1 tripName -->
         <oj-label for="trip">Trip</oj-label>
         <oj-input-text id="tripName" value="{{trip}}" required class="badBorder"></oj-input-text>
-        <oj-label for="reviewer" aria-label="Traveler">Customer Name</oj-label>
-        <oj-input-text id="reviewer" value="{{name}}"></oj-input-text>
+        <oj-label for="reviewer">Customer Name</oj-label>
+        <oj-input-text id="reviewer" value="{{name}}" aria-label="Traveler"></oj-input-text>
         <oj-label for="tripComments">Comments</oj-label>
 		<!-- 3.2.2 -->
         <oj-text-area id="tripComments" value="{{comment}}"

@@ -153,7 +153,9 @@ h2.pageheads {
 .skip a:hover {
 	cursor: default
 }
-        
+skipHide {
+	display: none;
+}         
 .demo-oracle-icon{
 	width:137px;
 	height:18px
