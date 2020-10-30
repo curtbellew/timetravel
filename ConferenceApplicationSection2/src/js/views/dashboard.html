@@ -1,0 +1,75 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<!-- 3.2.4 -->
+<!--style>
+    .searchInput:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:before {
+        content: '\01F50D';
+    }
+</style-->
+<div class="oj-hybrid-padding">
+    <!-- 1.4.3 -->
+    <h2 class="pageheads">Available Time Travel Adventures</h2>
+    <div id="sampleDemo" class="demo-padding demo-container">
+        <div id="componentDemoContent" style="width: 1px; min-width: 100%;">
+            <!--div lang="fr">Bon Voyage!</div>
+		<img class="travelImage" src="css/images/travel/charisse-kenion-415942-unsplash.jpg" alt="The day you were born"-->
+        </div>
+        <oj-list-view id="listview" class="oj-listview-card-layout" aria-label="Available Trips"
+            data="[[dataProvider]]" item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('server_template', true)]]"
+            selection-mode="none">
+        </oj-list-view>
+
+        <script type="text/html" id="server_template">
+            <li :id="[[$data['tripId']]]">
+		        <div>
+                    <div>
+                        <h3 class="cardHeaders">
+                            <oj-bind-text value="[[name]]"></oj-bind-text>
+                        </h3>
+                        <img class="travelImage" :src="[['css/images/travel/'+ image]]" :alt="[[name]]"/>
+                        <p>
+                            <oj-bind-text value="[[description]]"></oj-bind-text>
+                        </p>
+                    </div>
+                    <!-- 2.4.4 3.2.4('More Info On '+)-->
+                    <a href="#" on-click="[[$parent.viewDetail]]">
+                        <oj-bind-text value="[[buttonText]]"></oj-bind-text>
+                    </a>
+		        </div>
+            </li>
+        </script>
+        <!-- 1.4.13 -->
+        <!--Suggest <a href="my.oracle.com" title="Tooltip for Suggest a Trip!">Trips</a> |
+        <span style="position: relative;">
+            Previous<a id="myTipLink" class="help" href="http://my.oracle.com" style="padding-left:8px" data-title="Tooltip for the Previous trips!">Trips</a>
+            <span id="myTooltip" style="display:none;position: absolute;border: 1px solid black;background-color: white;white-space:nowrap;top: 20px;left: 7px;">Tooltip for the Previous trips!</span>
+        </span>|-->
+        <span id="popupWrapper" data-oj-binding-provider="none">
+            Planned<a class="help" href="http://my.oracle.com" style="padding-left:5px" data-title="Tooltip for the Planned trips!">Trips</a> | 
+            Suggest<a class="help" href="http://my.oracle.com" style="padding-left:5px" data-title="Tooltip for Suggest a Trip!">Trips</a> |
+            Previous<a id="myTipLink" class="help" href="http://my.oracle.com" style="padding-left:5px" data-title="Tooltip for the Previous trips!">Trips</a> |
+        </span>
+        
+        </span>
+        <!-- 2.1.1 2.1.2 -->
+        <a class="help" href="http://my.oracle.com" style="padding-left:5px">Help</a>
+        |
+        <a class="help" href="http://my.oracle.com" style="padding-left:5px">Custom Trip</a>
+
+    </div>
+    Select a trip to register for that trip.
+</div>
+
+
+</div>
+<!-- 1.4.5 -->
+<img src="css/images/travel/titanic12.jpg" height="400px"
+    alt="" />

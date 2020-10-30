@@ -1,0 +1,210 @@
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!-- 3.2.4 -->
+<!--style>
+    .searchInput:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:focus {
+        outline: #053a92 solid 1px;
+    }
+    .searchButton:before {
+        content: '🧙';
+    }
+</style-->
+<div class="oj-flex oj-flex-items-pad">
+	<div class="oj-flex-item">
+		<!-- 2.4.6 -->
+		<h2>Demo</h2>
+	</div>
+</div>
+<!--Chuck is Bossy-->
+<div aria-live="polite" id="notifications" style="position:absolute;left:-1000"></div>
+<div id="div1">
+	<oj-validation-group id="tracker" valid="{{groupValid}}">
+		<oj-form-layout label-edge="start" id="fl1">
+			<div class="oj-flex-item oj-flex oj-xl-flex-items-2">
+				<div class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12 oj-flex oj-xl-flex-items-2">
+					<div class="oj-flex-item oj-panel oj-sm-12 oj-md-12 oj-lg-8 oj-xl-8">
+						<h2>Your Details</h2>
+						<oj-form-layout id="form-container">
+							<!-- given-name
+								family-name
+								email 
+								address-line1
+								address-line2
+								address-level2
+								address-level1
+								postal-code
+							-->
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<oj-label for="ftext-input" show-required="true">First Name</oj-label>
+									<!--div class="oj-label">First Name *</div-->
+									<oj-input-text id="ftext-input" value="{{fnamevalue}}" required autocomplete="given-name"></oj-input-text>
+								</div>
+								<div class="oj-flex-item">
+									<oj-label for="ltext-input" show-required="true">Last Name</oj-label>
+									<oj-input-text id="ltext-input" value="{{lnamevalue}}" required autocomplete="family-name"></oj-input-text>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<oj-label for="etext-input" show-required="false">Email</oj-label>
+									<oj-input-text id="etext-input" value="{{emailvalue}}" autocomplete="email"></oj-input-text>
+								</div>
+								<div class="oj-flex-item">
+									<!-- 3.3.1 -->
+									<oj-label for="cetext-input" show-required="false">Confirm Email</oj-label>
+									<oj-input-text id="cetext-input" value="{{cemailvalue}}" validators="[[emailMatchValidator]]">
+									</oj-input-text>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<oj-label for="atext-input" show-required="true">Address 1</oj-label>
+									<oj-input-text id="atext-input" value="{{address1}}" autocomplete="address-line1" required></oj-input-text>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<oj-label for="aatext-input" show-required="false">Address 2</oj-label>
+									<oj-input-text id="aatext-input" value="{{address2}}" autocomplete="address-line2"></oj-input-text>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<oj-label for="ctext-input" show-required="true">City</oj-label>
+									<oj-input-text id="ctext-input" value="{{cityvalue}}" autocomplete="address-level2" required></oj-input-text>
+								</div>
+								<div class="oj-flex-item" style="margin-left: -51px;">
+									<oj-label for="state" show-required="true">State</oj-label>
+									<oj-select-one id="state" value="{{statevalue}}" required autocomplete="address-level1">
+										<oj-option value="AL">Alabama</oj-option>
+										<oj-option value="AK">Alaska</oj-option>
+										<oj-option value="AZ">Arizona</oj-option>
+										<oj-option value="AR">Arkansas</oj-option>
+										<oj-option value="CA">California</oj-option>
+										<oj-option value="CO">Colorado</oj-option>
+										<oj-option value="CT">Connecticut</oj-option>
+										<oj-option value="DE">Delaware</oj-option>
+										<oj-option value="DC">District Of Columbia</oj-option>
+										<oj-option value="FL">Florida</oj-option>
+										<oj-option value="GA">Georgia</oj-option>
+										<oj-option value="HI">Hawaii</oj-option>
+										<oj-option value="ID">Idaho</oj-option>
+										<oj-option value="IL">Illinois</oj-option>
+										<oj-option value="IN">Indiana</oj-option>
+										<oj-option value="IA">Iowa</oj-option>
+										<oj-option value="KS">Kansas</oj-option>
+										<oj-option value="KY">Kentucky</oj-option>
+										<oj-option value="LA">Louisiana</oj-option>
+										<oj-option value="ME">Maine</oj-option>
+										<oj-option value="MD">Maryland</oj-option>
+										<oj-option value="MA">Massachusetts</oj-option>
+										<oj-option value="MI">Michigan</oj-option>
+										<oj-option value="MN">Minnesota</oj-option>
+										<oj-option value="MS">Mississippi</oj-option>
+										<oj-option value="MO">Missouri</oj-option>
+										<oj-option value="MT">Montana</oj-option>
+										<oj-option value="NE">Nebraska</oj-option>
+										<oj-option value="NV">Nevada</oj-option>
+										<oj-option value="NH">New Hampshire</oj-option>
+										<oj-option value="NJ">New Jersey</oj-option>
+										<oj-option value="NM">New Mexico</oj-option>
+										<oj-option value="NY">New York</oj-option>
+										<oj-option value="NC">North Carolina</oj-option>
+										<oj-option value="ND">North Dakota</oj-option>
+										<oj-option value="OH">Ohio</oj-option>
+										<oj-option value="OK">Oklahoma</oj-option>
+										<oj-option value="OR">Oregon</oj-option>
+										<oj-option value="PA">Pennsylvania</oj-option>
+										<oj-option value="RI">Rhode Island</oj-option>
+										<oj-option value="SC">South Carolina</oj-option>
+										<oj-option value="SD">South Dakota</oj-option>
+										<oj-option value="TN">Tennessee</oj-option>
+										<oj-option value="TX">Texas</oj-option>
+										<oj-option value="UT">Utah</oj-option>
+										<oj-option value="VT">Vermont</oj-option>
+										<oj-option value="VA">Virginia</oj-option>
+										<oj-option value="WA">Washington</oj-option>
+										<oj-option value="WV">West Virginia</oj-option>
+										<oj-option value="WI">Wisconsin</oj-option>
+										<oj-option value="WY">Wyoming</oj-option>
+									</oj-select-one>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<!-- 3.3.3 -->
+									<oj-label for="zetext-input" show-required="true">Zip Code</oj-label>
+									<oj-input-text id="zetext-input" value="{{zipvalue}}" required autocomplete="postal-code" validators="[[zippers]]">
+									</oj-input-text>
+								</div>
+								<div class="oj-flex-item" style="margin-left: -40px;">
+									<oj-label for="tnum">Number of Travelers</oj-label>
+									<oj-input-number id="tnum" max="4" min="1" step="1" value="{{travelernumber}}">
+									</oj-input-number>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item">
+									<!-- 3.3.2 -->
+									<oj-label for="date">Departure Date</oj-label>
+									<oj-input-date-time id="date" value='{{datevalue}}'></oj-input-date-time>
+								</div>
+								<div class="oj-flex-item" style="margin-left: -75px;">
+									<oj-label for="inputnumber-id">Length of Stay</oj-label>
+									<oj-input-number id="inputnumber-id" max="10" min="1" step="1" value="{{lengthofstay}}">
+									</oj-input-number>
+								</div>
+							</div>
+							<div class="oj-flex oj-flex-items-pad">
+								<div class="oj-flex-item"></div>
+								<div class="oj-flex-item" style="justify-content: space-between;text-align: end;">
+									<!-- 2.4.3 -->
+									<oj-button id='accept' on-oj-action='[[submit]]'>OK</oj-button>
+									<!--oj-button id="submitBtn" on-oj-action="[[submit]]">Cancel</oj-button-->
+									<span style="position: relative;/*! right:80px; */bottom: 2px;">
+										<span style="/*! position:absolute; *//*! right:0px; */">
+											<a href="#" style="background-color: #ededee;border-color: #cbcccd;background-image: none;color: #000;padding: 6px;display: inline;margin-bottom: 4px;" class="oj-button oj-button-button oj-component-initnode oj-button-text oj-button-label " data-bind="click:buttonClick" aria-label="Cancel Button">
+												Cancel
+											</a>
+										</span>
+									</span>
+								</div>
+							</div>	
+					</div>
+					<div class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-4 oj-xl-4 oj-panel">
+						<!-- 1.4.12 -->
+						<h2 style="height: 30px;overflow: hidden;display: block;">
+							<oj-bind-text value="[[tripName]]"></oj-bind-text>
+						</h2>
+						<div class="oj-flex oj-flex-items-pad oj-xl-flex-items-1">
+							<!-- 1.1.1 -->
+							<img :src="[['css/images/travel/' + image()]]" height="400px" alt=""/>
+							<p>
+								<span>
+									<oj-bind-text value="[[description]]"></oj-bind-text>
+								</span>
+							</p>
+							<!-- 2.4.5 -->
+							<!--oj-button id='testimonialsbutton' on-oj-action='[[testimonials]]'>Reviews</oj-button-->
+
+						</div>
+					</div>
+				</div>
+				<div class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12 oj-panel">
+					Nothing in here
+				</div>
+			</div>
+		</oj-form-layout>
+	</oj-validation-group>
+
+	<span id="results">
+		<oj-bind-text value="[[clickedButton]]"></oj-bind-text>
+	</span>
+</div>

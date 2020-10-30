@@ -1,0 +1,56 @@
+[{
+  "tripId": 1,
+  "name": "Birthday!  The day you were born.",
+  "image": "charisse-kenion-415942-unsplash.jpg",
+  "price": "$750",
+  "description": "You can go back in time to the day that started it all for you.  Witness the miracle of life; your life.  Take pictures for your social media feeds!",
+  "buttonText": "Birthday (More Details)"
+},
+{
+  "tripId": 2,
+  "name": "Kizmet.  The day you met your spouse",
+  "image": "charles-deluvio-651959-unsplash.jpg",
+  "price": "$950",
+  "description": "Relive the moment you first set eyes upon your one and only.",
+  "buttonText": "Kizmet (More Details)"
+},
+{
+  "tripId": 3,
+  "name": "Y2K",
+  "image": "roven-images-601197-unsplash.jpg",
+  "price": "$625",
+  "description": "There was a ton of hype about what would happen when the clock struck midnight in the year 2000.  See what transpired.",
+  "buttonText": "Y2K (More Details)"
+},
+{
+  "tripId": 4,
+  "name": "Simpler times",
+  "image": "h-e-n-g-s-t-r-e-a-m-508476-unsplash.jpg",
+  "price": "$865",
+  "description": "Why not go back in time when life was easier, no technology, less distractions.",
+  "buttonText": "Simpler Times (More Details)"
+},
+{
+  "tripId": 5,
+  "name": "A future date",
+  "image": "jazmin-quaynor-392995-unsplash.jpg",
+  "price": "$1195",
+  "description": "Find out what your future could look like.",
+  "buttonText": "The Future (More Details)"
+},
+{
+  "tripId": 6,
+  "name": "Surfing Hawaii 1900",
+  "image": "rbBryan_Natural_Hist_Hawaii_1915_P16_2.jpg",
+  "price": "$1295",
+  "description": "See where it all started by watch Hawaiians surf on wooden planks before anyone else in the world even knew what it was.",
+  "buttonText": "Surfing Hawaii (More Details)"
+},
+{
+  "tripId": 7,
+  "name": "Aretha in Concert",
+  "image": "Aretha.jpg",
+  "price": "$1500",
+  "description": "See the legendary Aretha Franklin perform live at the Apollo Theater!!",
+  "buttonText": "Aretha Franklin (More Details)"
+}]

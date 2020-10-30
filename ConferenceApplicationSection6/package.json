@@ -1,0 +1,15 @@
+{
+  "name": "ConferenceAppSection6-v800",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "http://artifactory-slc.oraclecorp.com/artifactory/ojet-dev-local/oracle-oraclejet-8.0.0.tgz"
+  },
+  "devDependencies": {
+    "@oracle/oraclejet-tooling": "http://artifactory-slc.oraclecorp.com/artifactory/ojet-dev-local/oracle-oraclejet-tooling-8.0.0.tgz"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}
