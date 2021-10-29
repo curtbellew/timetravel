@@ -7,15 +7,18 @@
 /**
  * View Model for detail screen
  */
-define(['knockout', 'jquery', 'text!../appData.json', 'ojs/ojknockout', 'ojs/ojbutton'
-], function (ko, $, appData) {
+define(['knockout', 'jquery', accUtils, 'text!../appData.json', 'ojs/ojknockout', 'ojs/ojbutton'
+], function (ko, $, accUtils, appData) {
 
   /**
    * The view model for the main content view template
    */
   function detailContentViewModel(params) {
     var self = this;
-
+  self.connected = function() {
+        accUtils.announce('Trip details page loaded.');
+        // Implement if needed
+      };
     var data = JSON.parse(appData);
     var router = oj.Router.rootInstance;
     var parent = params.parentVM;
