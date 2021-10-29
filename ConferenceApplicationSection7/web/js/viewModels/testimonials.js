@@ -43,7 +43,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'accUtils', 'ojs/ojknockout', 'ojs/o
        * after being disconnected.
        */
       self.connected = function() {
-        accUtils.announce('Dashboard page loaded.');
+        accUtils.announce('Reviews page loaded.');
         // Implement if needed
       };
 
