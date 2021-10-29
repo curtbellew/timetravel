@@ -6,7 +6,7 @@
 /*
  * Your customer ViewModel code goes here
  */
-define(['knockout', 'jquery', accUtils, 'ojs/ojrouter', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojbutton'],
+define(['knockout', 'jquery', 'accUtils', 'ojs/ojrouter', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojbutton'],
  function(ko, $, accUtils, Router, appData) {
   
     function CustomerViewModel(params) {
