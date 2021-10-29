@@ -8,7 +8,7 @@
  * register module
  */
 define(['knockout',
-	'jquery', accUtils,
+	'jquery', 'accUtils',
 	'text!../appData.json',
 	'ojs/ojrouter',
 	'ojs/ojvalidation-base',
@@ -27,7 +27,7 @@ define(['knockout',
 	'ojs/ojtable'],
 	function (ko, $, accUtils, appData, Router, ValidationBase) {
 		function SimpleModel() {
-			var self = this;
+			//var self = this;
 			self.data = JSON.parse(appData);
 			var router = Router.rootInstance;
 			self.details = ko.observable();
@@ -61,7 +61,12 @@ define(['knockout',
 			self.zvalue = ko.observable();
 
 	self.connected = function() {
-		accUtils.announce('Registration page loaded.');
+		//accUtils.announce('Registration page loaded.');
+		var component = document.querySelector("#notifications");
+				component.innerHTML = "Register Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
 		// Implement if needed
       	};
 			self.updateDetails = function (id) {

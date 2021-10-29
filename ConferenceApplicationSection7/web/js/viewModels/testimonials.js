@@ -43,7 +43,12 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'accUtils', 'ojs/ojknockout', 'ojs/o
        * after being disconnected.
        */
       self.connected = function() {
-        accUtils.announce('Reviews page loaded.');
+        //accUtils.announce('Reviews page loaded.');
+        var component = document.querySelector("#notifications");
+				component.innerHTML = "REview page Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
         // Implement if needed
       };
 

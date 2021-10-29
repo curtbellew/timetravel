@@ -11,7 +11,12 @@ define(['knockout', 'accUtils', 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojarraydat
     function SurveyViewModel() {
     var self = this;
       self.connected = function() {
-        accUtils.announce('Survey page loaded.');
+        //accUtils.announce('Survey page loaded.');
+        var component = document.querySelector("#notifications");
+				component.innerHTML = "Survey page Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
         // Implement if needed
       };
     var deptArray = [

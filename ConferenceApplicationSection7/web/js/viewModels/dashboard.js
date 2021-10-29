@@ -29,7 +29,12 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'accUtils', 'text!../appData.json', 
        * after being disconnected.
        */
 			self.connected = function () {
-				accUtils.announce('Dashboard page loaded.');
+				//accUtils.announce('Dashboard page loaded.');
+				var component = document.querySelector("#notifications");
+				component.innerHTML = "Dashboard Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
 				// Implement if needed
 			};
 

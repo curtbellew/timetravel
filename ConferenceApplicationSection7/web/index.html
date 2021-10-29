@@ -92,6 +92,7 @@
     <div class="skip">
       <a href="#cont" id="menu">Skip Navigation.</a>
     </div>
+    <div aria-live="polite" id="notifications" style="position:absolute;left:-1000px"></div>
     <div id="navDrawer" role="navigation" class="oj-contrast-marker oj-web-applayout-offcanvas oj-offcanvas-start">
       <oj-navigation-list data="[[navDataProvider]]" edge="start"
         item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('navTemplate', true)]]" on-click="[[toggleDrawer]]"

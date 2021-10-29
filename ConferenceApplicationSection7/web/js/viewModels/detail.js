@@ -16,7 +16,12 @@ define(['knockout', 'jquery', 'accUtils', 'text!../appData.json', 'ojs/ojknockou
   function detailContentViewModel(params) {
     var self = this;
   self.connected = function() {
-        accUtils.announce('Trip details page loaded.');
+        //accUtils.announce('Trip details page loaded.');
+        var component = document.querySelector("#notifications");
+				component.innerHTML = "Details page Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
         // Implement if needed
       };
     var data = JSON.parse(appData);

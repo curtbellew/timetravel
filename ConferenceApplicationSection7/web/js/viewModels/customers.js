@@ -47,7 +47,12 @@ define(['knockout', 'jquery', 'accUtils', 'ojs/ojrouter', 'text!../appData.json'
        * after being disconnected.
        */
       self.connected = function() {
-	      accUtils.announce('Review registration page loaded.');
+	      //accUtils.announce('Review registration page loaded.');
+        var component = document.querySelector("#notifications");
+				component.innerHTML = "Registration verification Loaded";
+				let myGreeting = setTimeout(() => {
+				component.innerHTML = "";
+				}, 2000);
         // Implement if needed
       };
 
