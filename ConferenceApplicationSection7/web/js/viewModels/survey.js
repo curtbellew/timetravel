@@ -6,11 +6,14 @@
 /*
  * Your about ViewModel code goes here
  */
-define(['knockout', 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojarraydataprovider'],
- function(ko) {
+define(['knockout', accUtils, 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojarraydataprovider'],
+ function(ko, accUtils) {
     function SurveyViewModel() {
     var self = this;
-
+      self.connected = function() {
+        accUtils.announce('Survey page loaded.');
+        // Implement if needed
+      };
     var deptArray = [
         {UserId: "michele@vandoozer.com", TripName: 'Aretha', AccomidationId: "Great", FoodId: "Great"},
         {UserId: "curt@bellew.com", TripName: 'Y2K', AccomidationId: "Good", FoodId: "Decent"},
