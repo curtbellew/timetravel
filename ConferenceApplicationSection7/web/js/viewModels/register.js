@@ -8,7 +8,7 @@
  * register module
  */
 define(['knockout',
-	'jquery',
+	'jquery', accUtils,
 	'text!../appData.json',
 	'ojs/ojrouter',
 	'ojs/ojvalidation-base',
@@ -25,7 +25,7 @@ define(['knockout',
 	'ojs/ojvalidationgroup',
 	'ojs/ojformlayout',
 	'ojs/ojtable'],
-	function (ko, $, appData, Router, ValidationBase) {
+	function (ko, $, accUtils, appData, Router, ValidationBase) {
 		function SimpleModel() {
 			var self = this;
 			self.data = JSON.parse(appData);
@@ -60,7 +60,10 @@ define(['knockout',
 			self.allergiesvalue = ko.observable();
 			self.zvalue = ko.observable();
 
-
+	self.connected = function() {
+		accUtils.announce('Registration page loaded.');
+		// Implement if needed
+      	};
 			self.updateDetails = function (id) {
 				var tripDetails = self.data[id - 1];
 				if (tripDetails) {
