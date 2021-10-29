@@ -18,12 +18,10 @@
 	<div class="detail">
 		<img class="travelImage" :src="[['css/images/travel/' + image()]]" :alt="[[tripName]]"></img>
 		<div class="caption">
-			<h4 class="pull-right">
-				<oj-bind-text value="[[price]]"></oj-bind-text>
-			</h4>
 			<h4>
 				<oj-bind-text value="[[tripName]]"></oj-bind-text>
 			</h4>
+			<oj-bind-text value="[[price]]"></oj-bind-text>
 			<!-- 1.4.4 -->
 			<p><!--/p>< style="white-space: nowrap;"-->
 				<oj-bind-text value="[[description]]"></oj-bind-text>
