@@ -7,7 +7,7 @@
 /**
  * View Model for detail screen
  */
-define(['knockout', 'jquery', accUtils, 'text!../appData.json', 'ojs/ojknockout', 'ojs/ojbutton'
+define(['knockout', 'jquery', 'accUtils', 'text!../appData.json', 'ojs/ojknockout', 'ojs/ojbutton'
 ], function (ko, $, accUtils, appData) {
 
   /**
