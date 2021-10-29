@@ -6,8 +6,8 @@
 /*
  * Your customer ViewModel code goes here
  */
-define(['knockout', 'jquery', 'ojs/ojrouter', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojbutton'],
- function(ko, $, Router, appData) {
+define(['knockout', 'jquery', accutils, 'ojs/ojrouter', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojbutton'],
+ function(ko, $, accutils, Router, appData) {
   
     function CustomerViewModel(params) {
       var self = this;
@@ -47,6 +47,7 @@ define(['knockout', 'jquery', 'ojs/ojrouter', 'text!../appData.json', 'ojs/ojarr
        * after being disconnected.
        */
       self.connected = function() {
+	      accUtils.announce('Review registration page loaded.');
         // Implement if needed
       };
 
