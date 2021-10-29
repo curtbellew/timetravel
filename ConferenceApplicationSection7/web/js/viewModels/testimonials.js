@@ -16,11 +16,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'accUtils', 'ojs/ojknockout', 'ojs/o
       self.trip = ko.observable("");
       self.name = ko.observable("");
       self.comment = ko.observable("");
-      this.connected = () => {
-        accUtils.announce('Dashboard page loaded.');
-        document.title = "Dashboard :: ACRTool";
-        // Implement further logic if needed
-      };
       var testimonialArray = [
         {name:"Chuck World-Traveler", trip: "Y2K", comment:"HELP!!!  I'm stuck in the Y2K!"},
         {name:"Donny Baseball", trip: "Any", comment:"I would really love to see a trip that goes to the very first World Series"},
@@ -48,6 +43,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'accUtils', 'ojs/ojknockout', 'ojs/o
        * after being disconnected.
        */
       self.connected = function() {
+        accUtils.announce('Dashboard page loaded.');
         // Implement if needed
       };
 
