@@ -6,7 +6,7 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['knockout', 'jquery', accUtils, 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojlistview'],
+define(['knockout', 'jquery', 'accUtils', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojlistview'],
 	function (ko, $, accUtils, appData, ArrayDataProvider) {
 
 		function DashboardViewModel(params) {
