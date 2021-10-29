@@ -6,7 +6,7 @@
 /*
  * Your about ViewModel code goes here
  */
-define(['knockout', accUtils, 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojarraydataprovider'],
+define(['knockout', 'accUtils', 'ojs/ojknockout', 'ojs/ojtable', 'ojs/ojarraydataprovider'],
  function(ko, accUtils) {
     function SurveyViewModel() {
     var self = this;
