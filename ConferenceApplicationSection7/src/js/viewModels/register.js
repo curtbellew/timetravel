@@ -8,7 +8,7 @@
  * register module
  */
 define(['knockout',
-	'jquery',
+	'jquery', 'accUtils'
 	'text!../appData.json',
 	'ojs/ojrouter',
 	'ojs/ojvalidation-base',
@@ -25,9 +25,13 @@ define(['knockout',
 	'ojs/ojvalidationgroup',
 	'ojs/ojformlayout',
 	'ojs/ojtable'],
-	function (ko, $, appData, Router, ValidationBase) {
+	function (ko, $, accUtils, appData, Router, ValidationBase) {
 		function SimpleModel() {
 			var self = this;
+			self.connected = function() {
+			accUtils.announce('Registration page loaded.');
+			// Implement if needed
+		      };
 			self.data = JSON.parse(appData);
 			var router = Router.rootInstance;
 			self.details = ko.observable();
