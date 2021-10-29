@@ -6,8 +6,8 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['knockout', 'jquery', 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojlistview'],
-	function (ko, $, appData, ArrayDataProvider) {
+define(['knockout', 'jquery', accUtils, 'text!../appData.json', 'ojs/ojarraydataprovider', 'ojs/ojknockout', 'ojs/ojlistview'],
+	function (ko, $, accUtils, appData, ArrayDataProvider) {
 
 		function DashboardViewModel(params) {
 			
@@ -29,6 +29,7 @@ define(['knockout', 'jquery', 'text!../appData.json', 'ojs/ojarraydataprovider',
        * after being disconnected.
        */
 			self.connected = function () {
+				accUtils.announce('Dashboard page loaded.');
 				// Implement if needed
 			};
 
