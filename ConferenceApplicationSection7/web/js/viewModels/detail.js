@@ -70,8 +70,8 @@ define(['knockout', 'jquery', accUtils, 'text!../appData.json', 'ojs/ojknockout'
     var node = document.querySelector("#notifications");
     var busyContext = oj.Context.getContext(node).getBusyContext();
     busyContext.whenReady().then(function () {
-      var component = document.querySelector("#notifications");
-      component.innerHTML = "Content Loaded";
+      /*var component = document.querySelector("#notifications");
+      component.innerHTML = "Content Loaded";*/
       let trap = $('a.trap');
       $('a.trap').keydown(function (event) {
         event.preventDefault();
