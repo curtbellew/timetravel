@@ -111,7 +111,27 @@ define(['knockout',
 					tracker.focusOn("@firstInvalidShown");
 				}
 			};
-
+			self.cancel = function () {
+				self.fnamevalue = ko.observable();
+				self.lnamevalue = ko.observable();
+				self.address1 = ko.observable();
+				self.address2 = ko.observable();
+				self.emailvalue = ko.observable();
+				self.cemailvalue = ko.observable();
+				self.cityvalue = ko.observable();
+				self.statevalue = ko.observable();
+				self.zipvalue = ko.observable();
+				self.val = ko.observable(0);
+				self.datevalue = ko.observable(ValidationBase.IntlConverterUtils.dateToLocalIso(new Date(2020, 1, 1)));
+				self.lengthofstay = ko.observable(1);
+				self.travelernumber = ko.observable(1);
+				self.afnamevalue = ko.observable();
+				self.alnamevalue = ko.observable();
+				self.aagevalue = ko.observable();
+				self.allergiesvalue = ko.observable();
+				self.zvalue = ko.observable();
+				router.go('dashboard');
+			};
 			self.email = ko.observable();
 			self.email2 = ko.observable();
 			//3.3.3
